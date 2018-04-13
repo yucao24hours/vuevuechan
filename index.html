@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vue.js sandbox</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
-  </head>
-  <body>
-  </body>
+<head>
+  <title>Vue.js sandbox</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="yourname">
+    <label for="name">Your name here:</label>
+    <input type="text" v-model="name">
+    <p>{{ name }}</p>
+  </div>
+
+  <script>
+    var vm = new Vue({
+      el: "#yourname",
+      data: {
+        name: ""
+      }
+    })
+  </script>
+</body>
 </html>
